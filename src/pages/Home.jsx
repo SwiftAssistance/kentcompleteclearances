@@ -329,18 +329,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-slate-50 p-6 border-2 border-slate-900">
-                <h3 className="font-bold text-slate-500 uppercase text-xs mb-4 tracking-widest">Towns We Cover</h3>
-                <div className="flex flex-wrap gap-2">
-                  {TOWNS.slice(0, 12).map((town) => (
-                    <span key={town} className="inline-block px-3 py-1 bg-white border-2 border-slate-900 text-slate-800 font-bold text-sm hover:bg-red-600 hover:text-white transition-colors cursor-default">
-                      {town}
-                    </span>
-                  ))}
-                  <Link to="/about#areas" className="inline-block px-3 py-1 bg-red-600 border-2 border-slate-900 text-white font-bold text-sm hover:bg-red-700 transition-colors">
-                    + {TOWNS.length - 12} more
-                  </Link>
-                </div>
+              <div className="bg-slate-900 p-6 border-2 border-slate-900 text-white">
+                <h3 className="font-bold text-red-500 uppercase text-xs mb-3 tracking-widest">Covering All of Kent</h3>
+                <p className="text-slate-300 font-medium leading-relaxed">
+                  <span className="text-white font-bold">Maidstone</span> &bull; <span className="text-white font-bold">Ashford</span> &bull; Canterbury &bull; Dartford &bull; Sevenoaks &bull; Tunbridge Wells &bull; Gillingham &bull; Chatham &bull; Rochester &bull; Sittingbourne &bull; Faversham &bull; Whitstable <span className="text-red-400">&amp; all surrounding areas</span>
+                </p>
+                <Link to="/about#areas" className="inline-flex items-center gap-1 text-red-400 hover:text-red-300 font-bold text-sm mt-3 transition-colors">
+                  View full coverage area <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
 
               <div className="flex items-center gap-4 p-4 bg-green-100 border-l-4 border-green-600">
