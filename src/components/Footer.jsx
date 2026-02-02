@@ -5,7 +5,7 @@ import { Truck, Phone, MapPin, BadgeCheck, ArrowRight } from 'lucide-react';
 export default function Footer() {
   return (
     <>
-      <footer className="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+      <footer className="bg-slate-900 text-slate-300 py-16 border-t border-slate-800">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
@@ -19,8 +19,8 @@ export default function Footer() {
                 Professional, licensed waste removal services for Kent. We recycle 98% of what we collect. Family run, locally trusted.
               </p>
               <div className="flex gap-2 text-white">
-                <a href="tel:01622000000" className="p-2 bg-slate-800 border border-slate-700 hover:bg-red-600 transition-colors"><Phone className="w-4 h-4" /></a>
-                <Link to="/about" className="p-2 bg-slate-800 border border-slate-700 hover:bg-red-600 transition-colors"><MapPin className="w-4 h-4" /></Link>
+                <a href="tel:01622000000" className="p-2 bg-slate-800 border border-slate-700 hover:bg-red-600 transition-colors" aria-label="Call us"><Phone className="w-4 h-4" /></a>
+                <Link to="/about" className="p-2 bg-slate-800 border border-slate-700 hover:bg-red-600 transition-colors" aria-label="Our location"><MapPin className="w-4 h-4" /></Link>
               </div>
             </div>
 
@@ -52,7 +52,7 @@ export default function Footer() {
               <div className="bg-slate-800 p-4 border border-slate-700 text-xs">
                 <p className="font-bold text-white mb-1 flex items-center gap-1"><BadgeCheck className="w-4 h-4 text-green-400" /> Environment Agency Registered</p>
                 <p>Upper Tier Carrier Dealer</p>
-                <p className="font-mono text-slate-500">Reg: CBDU123456</p>
+                <p className="font-mono text-slate-400">Reg: CBDU123456</p>
               </div>
             </div>
           </div>

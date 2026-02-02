@@ -196,7 +196,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,0,0,0.1),transparent_50%)] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h2 className="text-3xl md:text-5xl font-black text-white uppercase mb-4">Ready to Clear the Clutter?</h2>
-          <p className="text-red-100 text-lg font-medium mb-8 max-w-lg mx-auto">Get a free, no-obligation quote in minutes. Call us or fill in our quick form.</p>
+          <p className="text-white/90 text-lg font-medium mb-8 max-w-lg mx-auto">Get a free, no-obligation quote in minutes. Call us or fill in our quick form.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button as="link" to="/contact" variant="secondary" className="text-lg">
               Get My Free Quote <ArrowRight className="w-5 h-5" />

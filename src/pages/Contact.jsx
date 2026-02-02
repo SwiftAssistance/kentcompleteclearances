@@ -38,7 +38,7 @@ export default function Contact() {
                 <Phone className="w-8 h-8 shrink-0 group-hover:rotate-12 transition-transform" />
                 <div>
                   <p className="font-black text-lg">01622 000 000</p>
-                  <p className="text-red-100 text-sm font-medium">Landline &mdash; Maidstone office</p>
+                  <p className="text-white/90 text-sm font-medium">Landline &mdash; Maidstone office</p>
                 </div>
               </a>
 
@@ -46,7 +46,7 @@ export default function Contact() {
                 <MessageCircle className="w-8 h-8 shrink-0 group-hover:rotate-12 transition-transform" />
                 <div>
                   <p className="font-black text-lg">07000 000 000</p>
-                  <p className="text-green-100 text-sm font-medium">WhatsApp &amp; text &mdash; send photos for instant quotes</p>
+                  <p className="text-white/90 text-sm font-medium">WhatsApp &amp; text &mdash; send photos for instant quotes</p>
                 </div>
               </a>
 
@@ -72,8 +72,8 @@ export default function Contact() {
 
               <div className="p-5 bg-slate-900 text-white border-2 border-slate-900">
                 <p className="font-bold flex items-center gap-2 mb-2"><BadgeCheck className="w-5 h-5 text-green-400" /> Licensing</p>
-                <p className="text-sm text-slate-400">Environment Agency Registered<br />Upper Tier Waste Carrier</p>
-                <p className="font-mono text-xs text-slate-500 mt-2">Reg: CBDU123456</p>
+                <p className="text-sm text-slate-300">Environment Agency Registered<br />Upper Tier Waste Carrier</p>
+                <p className="font-mono text-xs text-slate-400 mt-2">Reg: CBDU123456</p>
               </div>
             </div>
 
