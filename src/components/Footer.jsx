@@ -1,65 +1,175 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Truck, Phone, MapPin, BadgeCheck, ArrowRight } from 'lucide-react';
+import { Truck, Phone, MapPin, BadgeCheck, ArrowRight, Star, Clock, Recycle, Shield, Mail, MessageCircle } from 'lucide-react';
+import { Button } from './ui';
 
 export default function Footer() {
   return (
     <>
-      <footer className="bg-slate-900 text-slate-300 py-16 border-t border-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <Link to="/" className="flex items-center gap-3 mb-4">
-                <div className="bg-red-600 text-white p-2 border-2 border-slate-700">
-                  <Truck className="w-5 h-5" />
-                </div>
-                <span className="text-white font-black uppercase tracking-wider">Kent Complete Clearances</span>
-              </Link>
-              <p className="text-sm mb-4">
-                Professional, licensed waste removal services for Kent. We recycle 98% of what we collect. Family run, locally trusted.
-              </p>
-              <div className="flex gap-2 text-white">
-                <a href="tel:01622000000" className="p-2 bg-slate-800 border border-slate-700 hover:bg-red-600 transition-colors" aria-label="Call us"><Phone className="w-4 h-4" /></a>
-                <Link to="/about" className="p-2 bg-slate-800 border border-slate-700 hover:bg-red-600 transition-colors" aria-label="Our location"><MapPin className="w-4 h-4" /></Link>
+      {/* Pre-Footer CTA */}
+      <section className="bg-gradient-to-r from-red-600 to-red-700 py-10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1),transparent_50%)] pointer-events-none" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl md:text-3xl font-black text-white uppercase mb-2">Need a Quote Today?</h3>
+              <p className="text-white/80 font-medium">Send us a photo and get a fixed price in minutes.</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a href="tel:01622000000">
+                <Button variant="secondary" className="whitespace-nowrap">
+                  <Phone className="w-5 h-5" /> 01622 000 000
+                </Button>
+              </a>
+              <Button as="link" to="/contact" variant="dark" className="whitespace-nowrap">
+                Get Free Quote <ArrowRight className="w-5 h-5" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-slate-900 text-slate-300">
+        {/* Trust Bar */}
+        <div className="border-b border-slate-800 py-6">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div className="flex items-center justify-center gap-2">
+                <Shield className="w-5 h-5 text-green-500" />
+                <span className="text-sm font-bold text-white">Fully Insured</span>
               </div>
-            </div>
-
-            <div>
-              <h5 className="text-white font-bold uppercase tracking-wider mb-4">Services</h5>
-              <ul className="space-y-2 text-sm">
-                <li><Link to="/services" className="hover:text-red-500 transition-colors">House Clearance</Link></li>
-                <li><Link to="/services" className="hover:text-red-500 transition-colors">Garden Waste</Link></li>
-                <li><Link to="/services" className="hover:text-red-500 transition-colors">Office Clearouts</Link></li>
-                <li><Link to="/services" className="hover:text-red-500 transition-colors">Wait &amp; Load</Link></li>
-                <li><Link to="/services" className="hover:text-red-500 transition-colors">Builders Waste</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="text-white font-bold uppercase tracking-wider mb-4">Company</h5>
-              <ul className="space-y-2 text-sm">
-                <li><Link to="/about" className="hover:text-red-500 transition-colors">About Us</Link></li>
-                <li><Link to="/about#areas" className="hover:text-red-500 transition-colors">Areas Covered</Link></li>
-                <li><Link to="/about#faq" className="hover:text-red-500 transition-colors">FAQ</Link></li>
-                <li><Link to="/contact" className="hover:text-red-500 transition-colors">Get a Quote</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="text-white font-bold uppercase tracking-wider mb-4">Contact</h5>
-              <a href="tel:01622000000" className="text-lg font-bold text-white block mb-1 hover:text-red-400 transition-colors">01622 000 000</a>
-              <p className="text-sm mb-4">info@kentcompleteclearances.co.uk</p>
-              <div className="bg-slate-800 p-4 border border-slate-700 text-xs">
-                <p className="font-bold text-white mb-1 flex items-center gap-1"><BadgeCheck className="w-4 h-4 text-green-400" /> Environment Agency Registered</p>
-                <p>Upper Tier Carrier Dealer</p>
-                <p className="font-mono text-slate-400">Reg: CBDU123456</p>
+              <div className="flex items-center justify-center gap-2">
+                <Recycle className="w-5 h-5 text-green-500" />
+                <span className="text-sm font-bold text-white">98% Recycled</span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <Clock className="w-5 h-5 text-green-500" />
+                <span className="text-sm font-bold text-white">Same-Day Service</span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <div className="flex text-yellow-400">
+                  {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-current" />)}
+                </div>
+                <span className="text-sm font-bold text-white">50+ Reviews</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
-            <p>&copy; {new Date().getFullYear()} Kent Complete Clearances. All rights reserved.</p>
-            <p className="mt-2 md:mt-0">Designed with <span className="text-red-600">&hearts;</span> in Kent.</p>
+        {/* Main Footer */}
+        <div className="py-12">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+              {/* Brand */}
+              <div className="lg:col-span-1">
+                <Link to="/" className="flex items-center gap-3 mb-5">
+                  <div className="bg-red-600 text-white p-2.5 border-2 border-slate-700">
+                    <Truck className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <span className="text-white font-black uppercase tracking-tight text-lg block leading-tight">Kent Complete</span>
+                    <span className="text-red-500 font-black uppercase tracking-tight text-lg leading-tight">Clearances</span>
+                  </div>
+                </Link>
+                <p className="text-sm mb-5 leading-relaxed">
+                  Professional, licensed waste removal for homes and businesses across Kent. Family run, locally trusted since 2015.
+                </p>
+                <div className="bg-slate-800/50 p-4 border border-slate-700">
+                  <p className="font-bold text-white text-xs mb-2 flex items-center gap-2">
+                    <BadgeCheck className="w-4 h-4 text-green-400" /> Licensed Waste Carrier
+                  </p>
+                  <p className="text-xs text-slate-400">Environment Agency Registered</p>
+                  <p className="text-xs text-slate-400">Upper Tier Carrier Dealer</p>
+                  <p className="font-mono text-xs text-slate-500 mt-2">Reg: CBDU123456</p>
+                </div>
+              </div>
+
+              {/* Services */}
+              <div>
+                <h4 className="text-white font-black uppercase tracking-wider text-sm mb-5 flex items-center gap-2">
+                  <span className="w-8 h-0.5 bg-red-600"></span> Services
+                </h4>
+                <ul className="space-y-3 text-sm">
+                  <li><Link to="/services" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> House Clearance</Link></li>
+                  <li><Link to="/services" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Garden Waste</Link></li>
+                  <li><Link to="/services" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Office Clearouts</Link></li>
+                  <li><Link to="/services" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Wait &amp; Load</Link></li>
+                  <li><Link to="/services" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Builders Waste</Link></li>
+                </ul>
+              </div>
+
+              {/* Quick Links */}
+              <div>
+                <h4 className="text-white font-black uppercase tracking-wider text-sm mb-5 flex items-center gap-2">
+                  <span className="w-8 h-0.5 bg-red-600"></span> Company
+                </h4>
+                <ul className="space-y-3 text-sm">
+                  <li><Link to="/about" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> About Us</Link></li>
+                  <li><Link to="/about#areas" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Areas Covered</Link></li>
+                  <li><Link to="/about#reviews" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Customer Reviews</Link></li>
+                  <li><Link to="/about#faq" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> FAQ</Link></li>
+                  <li><Link to="/contact" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Get a Quote</Link></li>
+                </ul>
+              </div>
+
+              {/* Contact */}
+              <div>
+                <h4 className="text-white font-black uppercase tracking-wider text-sm mb-5 flex items-center gap-2">
+                  <span className="w-8 h-0.5 bg-red-600"></span> Contact Us
+                </h4>
+                <div className="space-y-4">
+                  <a href="tel:01622000000" className="flex items-center gap-3 group">
+                    <div className="bg-red-600 p-2 text-white group-hover:bg-red-500 transition-colors">
+                      <Phone className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-white font-bold">01622 000 000</p>
+                      <p className="text-xs text-slate-400">Landline</p>
+                    </div>
+                  </a>
+                  <a href="tel:07000000000" className="flex items-center gap-3 group">
+                    <div className="bg-green-600 p-2 text-white group-hover:bg-green-500 transition-colors">
+                      <MessageCircle className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-white font-bold">07000 000 000</p>
+                      <p className="text-xs text-slate-400">WhatsApp / Text</p>
+                    </div>
+                  </a>
+                  <a href="mailto:info@kentcompleteclearances.co.uk" className="flex items-center gap-3 group">
+                    <div className="bg-slate-700 p-2 text-white group-hover:bg-slate-600 transition-colors">
+                      <Mail className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-white font-bold text-sm">info@kentcomplete<br />clearances.co.uk</p>
+                    </div>
+                  </a>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-slate-700 p-2 text-white">
+                      <MapPin className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-white font-bold text-sm">Based in Maidstone</p>
+                      <p className="text-xs text-slate-400">Covering all of Kent</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-slate-800 py-6">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+              <p>&copy; {new Date().getFullYear()} Kent Complete Clearances. All rights reserved.</p>
+              <div className="flex items-center gap-6">
+                <Link to="/about" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
+                <Link to="/about" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
+                <p>Designed in Kent</p>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
