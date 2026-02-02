@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Subtle pulse for CTA buttons */
+@keyframes pulse-subtle {
+  0%, 100% { box-shadow: 4px 4px 0px 0px rgba(15,23,42,1); }
+  50% { box-shadow: 4px 4px 0px 0px rgba(220,38,38,1); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+/* Slow bounce for urgency badges */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+/* Custom selection color */
+::selection {
+  background-color: #fecaca;
+  color: #0f172a;
+}
+
+/* Focus visible ring for accessibility */
+:focus-visible {
+  outline: 3px solid #dc2626;
+  outline-offset: 2px;
+}
+
+/* Scroll offset for anchor links (accounts for sticky nav) */
+[id] {
+  scroll-margin-top: 80px;
+}
