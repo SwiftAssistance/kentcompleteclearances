@@ -65,7 +65,7 @@ export default function About() {
                   <div key={i} className="flex gap-4 items-start">
                     <div className="bg-red-600 text-white p-3 border-2 border-slate-900 shrink-0">{v.icon}</div>
                     <div>
-                      <h4 className="font-black uppercase text-sm mb-1">{v.title}</h4>
+                      <h3 className="font-black uppercase text-sm mb-1">{v.title}</h3>
                       <p className="text-slate-600 text-sm font-medium">{v.desc}</p>
                     </div>
                   </div>
@@ -109,7 +109,7 @@ export default function About() {
                 Our trucks are strategically located in <strong className="text-slate-900">Maidstone</strong> and <strong className="text-slate-900">Ashford</strong>, allowing us to offer same-day service to most major towns in Kent.
               </p>
               <div className="bg-white p-6 border-2 border-slate-900">
-                <h3 className="font-bold text-slate-400 uppercase text-xs mb-4 tracking-widest">Primary Service Locations</h3>
+                <h3 className="font-bold text-slate-500 uppercase text-xs mb-4 tracking-widest">Primary Service Locations</h3>
                 <div className="flex flex-wrap gap-2">
                   {TOWNS.map((town) => <TownBadge key={town} name={town} />)}
                 </div>
@@ -117,7 +117,7 @@ export default function About() {
               <div className="flex items-center gap-4 p-4 bg-red-100 border-l-4 border-red-600">
                 <MapPin className="w-8 h-8 text-red-600 shrink-0" />
                 <div>
-                  <h4 className="font-bold text-slate-900 uppercase text-sm">Responsible Disposal</h4>
+                  <h3 className="font-bold text-slate-900 uppercase text-sm">Responsible Disposal</h3>
                   <p className="text-xs text-slate-600 mt-1">All waste taken to authorized transfer stations in Cuxton and Lenham. Waste transfer notes on every job.</p>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function About() {
       <section className="py-14 md:py-16 bg-red-600 border-t-2 border-slate-900">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-5xl font-black text-white uppercase mb-4">Ready to Clear the Clutter?</h2>
-          <p className="text-red-100 text-lg font-medium mb-8 max-w-lg mx-auto">Get a free, no-obligation quote in minutes.</p>
+          <p className="text-white/90 text-lg font-medium mb-8 max-w-lg mx-auto">Get a free, no-obligation quote in minutes.</p>
           <Button as="link" to="/contact" variant="secondary" className="text-lg">
             Get My Free Quote <ArrowRight className="w-5 h-5" />
           </Button>

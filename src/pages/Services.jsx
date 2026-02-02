@@ -35,7 +35,7 @@ export default function Services() {
                 <Sofa className="w-10 h-10 shrink-0" />
                 <div>
                   <h2 className="text-2xl md:text-3xl font-black uppercase">House Clearance</h2>
-                  <p className="text-red-100 font-medium text-sm">Homes, flats, garages, lofts &amp; probate clearances</p>
+                  <p className="text-white/90 font-medium text-sm">Homes, flats, garages, lofts &amp; probate clearances</p>
                 </div>
               </div>
               <div className="p-8 space-y-6">
@@ -43,7 +43,7 @@ export default function Services() {
                   Whether it&apos;s a single sofa or an entire property, we handle every aspect of your house clearance. Our team arrives, loads everything into the van, and sweeps up before we leave. We&apos;re especially experienced with probate and bereavement clearances &mdash; we treat every home with respect.
                 </p>
                 <div>
-                  <h4 className="font-black uppercase text-sm text-slate-400 mb-3 tracking-widest">What We Take</h4>
+                  <h3 className="font-black uppercase text-sm text-slate-500 mb-3 tracking-widest">What We Take</h3>
                   <div className="flex flex-wrap gap-2">
                     {['Sofas & armchairs','Beds & mattresses','Wardrobes & drawers','Fridges & freezers','Washing machines','Cookers','Carpets & underlay','Loft clearances','Garage junk','Black bags','General household'].map(item => (
                       <span key={item} className="bg-slate-100 border-2 border-slate-900 px-3 py-1 font-bold text-sm">{item}</span>
@@ -69,7 +69,7 @@ export default function Services() {
                 <TreePine className="w-10 h-10 shrink-0" />
                 <div>
                   <h2 className="text-2xl md:text-3xl font-black uppercase">Garden Waste</h2>
-                  <p className="text-green-100 font-medium text-sm">Green waste, soil, rubble, shed demolition</p>
+                  <p className="text-white/90 font-medium text-sm">Green waste, soil, rubble, shed demolition</p>
                 </div>
               </div>
               <div className="p-8 space-y-6">
@@ -77,7 +77,7 @@ export default function Services() {
                   Overgrown jungle? Pile of soil from a landscaping job? Old rotten shed? We take it all. Our team loads everything &mdash; even the heavy stuff &mdash; and we sweep the patio before we leave. We can also dismantle sheds, decking, and fencing on-site.
                 </p>
                 <div>
-                  <h4 className="font-black uppercase text-sm text-slate-400 mb-3 tracking-widest">What We Take</h4>
+                  <h3 className="font-black uppercase text-sm text-slate-500 mb-3 tracking-widest">What We Take</h3>
                   <div className="flex flex-wrap gap-2">
                     {['Green waste','Branches & logs','Soil & turf','Rubble & hardcore','Old sheds','Fencing & trellis','Decking','Garden furniture','Plant pots','Paving slabs'].map(item => (
                       <span key={item} className="bg-green-50 border-2 border-slate-900 px-3 py-1 font-bold text-sm">{item}</span>
@@ -111,7 +111,7 @@ export default function Services() {
                   Cheaper than a skip. No permit needed. Our wait-and-load service means we turn up, you load (or we help), and we drive away immediately. No driveway blocked, no waiting days for collection. Perfect for kitchen and bathroom rip-outs, renovations, and building sites.
                 </p>
                 <div>
-                  <h4 className="font-black uppercase text-sm text-slate-400 mb-3 tracking-widest">What We Take</h4>
+                  <h3 className="font-black uppercase text-sm text-slate-500 mb-3 tracking-widest">What We Take</h3>
                   <div className="flex flex-wrap gap-2">
                     {['Rubble & concrete','Plasterboard','Timber & wood','Kitchen units','Bathroom suites','Tiles & ceramic','Metal & pipes','Bricks','Insulation','Mixed renovation waste'].map(item => (
                       <span key={item} className="bg-yellow-50 border-2 border-slate-900 px-3 py-1 font-bold text-sm">{item}</span>
@@ -137,7 +137,7 @@ export default function Services() {
                 <Trash2 className="w-10 h-10 shrink-0" />
                 <div>
                   <h2 className="text-2xl md:text-3xl font-black uppercase">Commercial &amp; Office</h2>
-                  <p className="text-slate-400 font-medium text-sm">WEEE, confidential waste, office furniture, retail units</p>
+                  <p className="text-slate-300 font-medium text-sm">WEEE, confidential waste, office furniture, retail units</p>
                 </div>
               </div>
               <div className="p-8 space-y-6">
@@ -168,11 +168,11 @@ export default function Services() {
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-0 border-4 border-slate-700">
             <div className="bg-slate-800 p-8 md:p-10">
               <div className="text-center mb-8">
-                <div className="inline-block bg-slate-700 px-4 py-2 text-slate-400 font-black uppercase text-sm tracking-wider border border-slate-600">Skip Hire</div>
+                <div className="inline-block bg-slate-700 px-4 py-2 text-slate-200 font-black uppercase text-sm tracking-wider border border-slate-600">Skip Hire</div>
               </div>
               <ul className="space-y-5">
                 {['Council permit needed (\u00a320\u2013\u00a365)','Wait 1\u20133 days for delivery','You load it yourself','Blocks your driveway for days','Extra charges for heavy items','Overloading fines','No recycling guarantee'].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-400 font-medium"><X className="w-5 h-5 text-red-500 shrink-0 mt-0.5" /><span>{item}</span></li>
+                  <li key={i} className="flex items-start gap-3 text-slate-300 font-medium"><X className="w-5 h-5 text-red-500 shrink-0 mt-0.5" /><span>{item}</span></li>
                 ))}
               </ul>
             </div>
@@ -216,7 +216,7 @@ export default function Services() {
       <section className="py-14 md:py-16 bg-red-600 border-y-2 border-slate-900">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-black text-white uppercase mb-4">Not Sure What You Need?</h2>
-          <p className="text-red-100 text-lg font-medium mb-8 max-w-lg mx-auto">Send us a photo and we&apos;ll give you an instant, no-obligation quote.</p>
+          <p className="text-white/90 text-lg font-medium mb-8 max-w-lg mx-auto">Send us a photo and we&apos;ll give you an instant, no-obligation quote.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button as="link" to="/contact" variant="secondary" className="text-lg">
               Get a Free Quote <ArrowRight className="w-5 h-5" />
