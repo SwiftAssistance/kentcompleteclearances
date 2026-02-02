@@ -7,11 +7,9 @@ import {
   MapPin,
   Clock,
   ArrowRight,
-  Recycle,
   Sofa,
   TreePine,
   Construction,
-  FileText,
   Star,
   Menu,
   X,
@@ -26,9 +24,6 @@ import {
   Award,
   BadgeCheck,
   CalendarCheck,
-  PoundSterling,
-  CircleDot,
-  Users,
   Sparkles
 } from 'lucide-react';
 
@@ -50,7 +45,7 @@ const Button = ({ children, variant = 'primary', className = '', ...props }) => 
 };
 
 const SectionHeading = ({ title, subtitle, align = 'center', light = false }) => (
-  <div className={`mb-12 ${align === 'left' ? 'text-left' : 'text-center'}`}>
+  <div className={`mb-8 ${align === 'left' ? 'text-left' : 'text-center'}`}>
     <h2 className={`text-3xl md:text-5xl font-black uppercase tracking-tight mb-4 ${light ? 'text-white' : 'text-slate-900'}`}>
       {title}
     </h2>
@@ -164,9 +159,8 @@ export default function App() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const stat1 = useCountUp(2400);
-  const stat2 = useCountUp(98);
-  const stat3 = useCountUp(500);
+  const stat1 = useCountUp(98);
+  const stat2 = useCountUp(50);
 
   const reviews = [
     { name: "Sarah Jenkins", location: "Maidstone", text: "Absolutely brilliant service. The lads arrived on time, cleared my mum's garage in under an hour and swept up after. Much easier than hiring a skip." },
@@ -315,7 +309,7 @@ export default function App() {
                   <div className="flex items-center gap-1 text-yellow-500">
                     {[1,2,3,4,5].map(i => <Star key={i} className="w-3 h-3 fill-current" />)}
                   </div>
-                  <span className="text-slate-600 font-bold">500+ five-star reviews across Kent</span>
+                  <span className="text-slate-600 font-bold">50+ five-star reviews across Kent</span>
                 </div>
               </div>
             </div>
@@ -347,35 +341,33 @@ export default function App() {
         </div>
       </header>
 
-      {/* ========== ANIMATED STATS BAR ========== */}
-      <section className="bg-slate-900 text-white py-16 border-b-2 border-slate-900 relative overflow-hidden">
+      {/* ========== TRUST STRIP ========== */}
+      <section className="bg-slate-900 text-white py-10 border-b-2 border-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(220,38,38,0.15),transparent_50%)] pointer-events-none"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="space-y-2">
+              <Shield className="w-8 h-8 mx-auto text-red-500" />
+              <div className="text-sm font-bold uppercase tracking-wider text-slate-300">Fully Insured</div>
+            </div>
             <div ref={stat1.ref} className="space-y-2">
-              <div className="text-4xl md:text-5xl font-black text-red-500">{stat1.count.toLocaleString()}+</div>
-              <div className="text-sm font-bold uppercase tracking-wider text-slate-400">Jobs Completed</div>
+              <div className="text-3xl md:text-4xl font-black text-red-500">{stat1.count}%</div>
+              <div className="text-sm font-bold uppercase tracking-wider text-slate-300">Waste Recycled</div>
             </div>
             <div ref={stat2.ref} className="space-y-2">
-              <div className="text-4xl md:text-5xl font-black text-red-500">{stat2.count}%</div>
-              <div className="text-sm font-bold uppercase tracking-wider text-slate-400">Waste Recycled</div>
-            </div>
-            <div ref={stat3.ref} className="space-y-2">
-              <div className="text-4xl md:text-5xl font-black text-red-500">{stat3.count}+</div>
-              <div className="text-sm font-bold uppercase tracking-wider text-slate-400">5-Star Reviews</div>
+              <div className="text-3xl md:text-4xl font-black text-red-500">{stat2.count}+</div>
+              <div className="text-sm font-bold uppercase tracking-wider text-slate-300">5-Star Reviews</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl md:text-5xl font-black text-red-500">
-                <Zap className="w-10 h-10 md:w-12 md:h-12 mx-auto text-red-500" />
-              </div>
-              <div className="text-sm font-bold uppercase tracking-wider text-slate-400">Same-Day Service</div>
+              <Zap className="w-8 h-8 mx-auto text-red-500" />
+              <div className="text-sm font-bold uppercase tracking-wider text-slate-300">Same-Day Service</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ========== HOW IT WORKS ========== */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-14 md:py-16 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#fef2f2_1px,transparent_1px),linear-gradient(to_bottom,#fef2f2_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-50 pointer-events-none"></div>
         <div className="container mx-auto px-4 relative z-10">
           <SectionHeading
@@ -409,19 +401,11 @@ export default function App() {
             ))}
           </div>
 
-          {/* CTA under how it works */}
-          <div className="text-center mt-12">
-            <a href="#contact">
-              <Button className="text-lg px-10">
-                Get Your Free Quote Now <ArrowRight className="w-5 h-5" />
-              </Button>
-            </a>
-          </div>
         </div>
       </section>
 
       {/* ========== SERVICES ========== */}
-      <section id="services" className="py-20 bg-slate-50 border-y-2 border-slate-900 relative">
+      <section id="services" className="py-14 md:py-16 bg-slate-50 border-y-2 border-slate-900 relative">
         <div className="container mx-auto px-4">
           <SectionHeading
             title="Our Services"
@@ -515,7 +499,7 @@ export default function App() {
       </section>
 
       {/* ========== WHY US vs SKIP HIRE ========== */}
-      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-14 md:py-16 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(220,38,38,0.1),transparent_50%)] pointer-events-none"></div>
         <div className="container mx-auto px-4 relative z-10">
           <SectionHeading
@@ -585,79 +569,11 @@ export default function App() {
         </div>
       </section>
 
-      {/* ========== PRICING INDICATORS ========== */}
-      <section className="py-20 bg-white relative">
-        <div className="container mx-auto px-4">
-          <SectionHeading
-            title="Transparent Pricing"
-            subtitle="No surprises. No hidden fees. Just honest, upfront pricing."
-          />
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              { title: 'Single Items', price: '30', desc: 'One sofa, fridge, mattress, or similar item. Perfect for quick removals.', items: ['1 large item', 'Loading included', 'Same-day available'], popular: false },
-              { title: 'Partial Load', price: '120', desc: 'A few items or bags. Great for a garage clear-out or small garden job.', items: ['Up to 1/3 van', 'Loading included', 'Sweep up after'], popular: true },
-              { title: 'Full Load', price: '220', desc: 'Full van load. Ideal for house clearances, office moves, or big garden jobs.', items: ['Full van load', 'Loading included', 'Waste transfer note'], popular: false },
-            ].map((plan, i) => (
-              <div key={i} className={`relative border-4 border-slate-900 p-8 bg-white text-center group hover:-translate-y-2 transition-transform duration-300 ${plan.popular ? 'shadow-[8px_8px_0px_0px_rgba(220,38,38,1)]' : 'shadow-[8px_8px_0px_0px_rgba(15,23,42,1)]'}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-1 text-xs font-black uppercase border-2 border-slate-900 whitespace-nowrap">
-                    Most Popular
-                  </div>
-                )}
-                <h3 className="text-xl font-black uppercase mb-2">{plan.title}</h3>
-                <div className="mb-4">
-                  <span className="text-sm text-slate-500 font-bold">from</span>
-                  <div className="text-5xl font-black text-slate-900">
-                    <span className="text-2xl align-top">&pound;</span>{plan.price}
-                  </div>
-                </div>
-                <p className="text-slate-600 font-medium mb-6 text-sm">{plan.desc}</p>
-                <ul className="space-y-3 mb-8 text-left">
-                  {plan.items.map((item, j) => (
-                    <li key={j} className="flex items-center gap-2 text-sm font-bold text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0" /> {item}
-                    </li>
-                  ))}
-                </ul>
-                <a href="#contact">
-                  <Button variant={plan.popular ? 'primary' : 'outline'} className="w-full">
-                    Get This Quote
-                  </Button>
-                </a>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-center text-slate-500 text-sm mt-8 font-medium">
-            Prices are starting guides. Every job is priced individually based on volume and access. No obligation quotes &mdash; always free.
-          </p>
-        </div>
-      </section>
-
-      {/* ========== TRUST BADGES ========== */}
-      <section className="py-12 bg-slate-100 border-y-2 border-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {[
-              { icon: <Shield className="w-8 h-8" />, label: 'Fully Insured', sub: 'Public liability covered' },
-              { icon: <BadgeCheck className="w-8 h-8" />, label: 'EA Registered', sub: 'Upper tier carrier' },
-              { icon: <Recycle className="w-8 h-8" />, label: '98% Recycled', sub: 'Eco-friendly disposal' },
-              { icon: <Users className="w-8 h-8" />, label: 'Family Run', sub: 'Local & trustworthy' },
-            ].map((badge, i) => (
-              <div key={i} className="bg-white border-2 border-slate-900 p-6 text-center shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:-translate-y-1 transition-transform">
-                <div className="text-red-600 mx-auto mb-3 flex justify-center">{badge.icon}</div>
-                <p className="font-black uppercase text-sm">{badge.label}</p>
-                <p className="text-xs text-slate-500 font-medium mt-1">{badge.sub}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ========== AREAS COVERED ========== */}
-      <section id="areas" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section id="areas" className="py-14 md:py-16 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-red-50 rounded-full opacity-40 blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-slate-100 rounded-full opacity-50 blur-3xl pointer-events-none"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <SectionHeading title="Areas Covered" subtitle="We're local, reliable, and ready to roll across Kent." />
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             <div className="order-2 lg:order-1">
@@ -710,7 +626,7 @@ export default function App() {
       </section>
 
       {/* ========== REVIEWS ========== */}
-      <section id="reviews" className="py-20 bg-slate-50 border-y-2 border-slate-900">
+      <section id="reviews" className="py-14 md:py-16 bg-slate-50 border-y-2 border-slate-900">
         <div className="container mx-auto px-4">
           <SectionHeading title="What The Locals Say" subtitle="Real feedback from real Kent customers. We don't delete reviews." />
 
@@ -728,7 +644,7 @@ export default function App() {
             <div className="bg-white border-2 border-slate-900 px-6 py-3 flex items-center gap-3 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
               <Award className="w-8 h-8 text-red-600" />
               <div>
-                <span className="font-black text-slate-900 text-sm uppercase">500+ Verified Reviews</span>
+                <span className="font-black text-slate-900 text-sm uppercase">50+ Verified Reviews</span>
               </div>
             </div>
           </div>
@@ -775,8 +691,9 @@ export default function App() {
       </section>
 
       {/* ========== FAQ ========== */}
-      <section id="faq" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section id="faq" className="py-14 md:py-16 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(254,202,202,0.15),transparent_40%)] pointer-events-none"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <SectionHeading
             title="Frequently Asked Questions"
             subtitle="Got questions? We've got straight answers."
@@ -806,7 +723,7 @@ export default function App() {
       </section>
 
       {/* ========== FINAL CTA / BOOKING FORM ========== */}
-      <section id="contact" className="py-20 bg-red-600 text-white relative overflow-hidden">
+      <section id="contact" className="py-14 md:py-16 bg-red-600 text-white relative overflow-hidden">
         {/* Background texture */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,0,0,0.1),transparent_50%)] pointer-events-none"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_50%)] pointer-events-none"></div>
