@@ -174,16 +174,16 @@ export default function Footer() {
         </div>
       </footer>
 
-      {/* Floating WhatsApp Button */}
-      <a
-        href="https://wa.me/447000000000"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all"
-        aria-label="Chat on WhatsApp"
-      >
-        <MessageCircle className="w-6 h-6" />
-      </a>
+      {/* Sticky Mobile CTA */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-slate-900 border-t border-red-600 p-2 flex gap-2">
+        <a href="tel:01622000000" className="flex-1 bg-red-600 text-white text-center py-2 font-bold uppercase text-xs border border-slate-700 flex items-center justify-center gap-1">
+          <Phone className="w-3 h-3" /> Call
+        </a>
+        <Link to="/contact" className="flex-1 bg-white text-slate-900 text-center py-2 font-bold uppercase text-xs border border-slate-700 flex items-center justify-center gap-1">
+          <ArrowRight className="w-3 h-3" /> Quote
+        </Link>
+      </div>
+      <div className="h-12 md:hidden"></div>
     </>
   );
 }
