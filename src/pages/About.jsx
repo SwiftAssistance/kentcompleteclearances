@@ -11,7 +11,7 @@ import useCountUp from '../hooks/useCountUp';
 export default function About() {
   const [activeReview, setActiveReview] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [openFAQ, setOpenFAQ] = useState(0);
+  const [openFAQ, setOpenFAQ] = useState(-1);
   const stat1 = useCountUp(98);
   const stat2 = useCountUp(50);
   const stat3 = useCountUp(2015);
@@ -48,7 +48,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-3 bg-white/10 border border-white/20 px-5 py-2 mb-8">
               <Heart className="w-5 h-5 text-red-500" />
-              <span className="text-white font-bold uppercase text-sm tracking-wider">Family Run Since 2015</span>
+              <span className="text-white font-bold uppercase text-sm tracking-wider">Family Run Since 2025</span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-6">
@@ -61,7 +61,7 @@ export default function About() {
 
             <div className="flex flex-wrap justify-center gap-8">
               {[
-                { value: '2015', label: 'Est.' },
+                { value: '2025', label: 'Est.' },
                 { value: '50+', label: 'Reviews' },
                 { value: '98%', label: 'Recycled' },
               ].map((stat, i) => (
@@ -92,7 +92,7 @@ export default function About() {
                     Kent Complete Clearances started with a simple idea: waste removal shouldn't cost a fortune, take all week, or end up dumped in a lay-by.
                   </p>
                   <p>
-                    We're a family-run team based in <strong className="text-slate-900">Maidstone</strong>, covering every corner of Kent. When you call us, you're speaking to the people who actually do the work — not a booking agent in another city.
+                    We're a family-run team based in <strong className="text-slate-900">Sittingbourne</strong>, covering every corner of Kent. When you call us, you're speaking to the people who actually do the work — not a booking agent in another city.
                   </p>
                   <p>
                     Every van is driven by an insured, DBS-checked team member. We recycle or donate <strong className="text-slate-900">98% of everything we collect</strong>. The rest goes to authorised transfer stations — never fly-tipped, ever.
@@ -131,7 +131,7 @@ export default function About() {
           <SectionHeading title="Our Credentials" subtitle="Licensed, insured, and accountable." light />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
-              { icon: <BadgeCheck className="w-10 h-10" />, title: 'EA Registered', desc: 'Upper Tier Waste Carrier (CBDU123456)', color: 'text-green-400' },
+              { icon: <BadgeCheck className="w-10 h-10" />, title: 'EA Registered', desc: 'Upper Tier Waste Carrier', color: 'text-green-400' },
               { icon: <Shield className="w-10 h-10" />, title: 'Fully Insured', desc: '£5M Public Liability Coverage', color: 'text-blue-400' },
               { icon: <FileCheck className="w-10 h-10" />, title: 'Duty of Care', desc: 'Waste Transfer Notes on every job', color: 'text-yellow-400' },
               { icon: <Recycle className="w-10 h-10" />, title: '98% Recycled', desc: 'Authorised disposal sites only', color: 'text-green-400' },
@@ -150,7 +150,7 @@ export default function About() {
       <section id="areas" className="py-16 md:py-20 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-red-50 rounded-full opacity-40 blur-3xl pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
-          <SectionHeading title="Areas Covered" subtitle="Based in Maidstone, serving every corner of Kent." />
+          <SectionHeading title="Areas Covered" subtitle="Based in Sittingbourne, serving every corner of Kent." />
           <div className="grid lg:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
             <div className="bg-white p-2 border-4 border-slate-900 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] h-[400px]">
               <iframe
@@ -168,7 +168,7 @@ export default function About() {
                 <div>
                   <h3 className="font-black uppercase text-lg mb-2">Same-Day Coverage</h3>
                   <p className="text-slate-600 font-medium">
-                    Our trucks are based in <strong className="text-slate-900">Maidstone</strong> and <strong className="text-slate-900">Ashford</strong>,
+                    Our trucks are based in <strong className="text-slate-900">Sittingbourne</strong>,
                     letting us reach most Kent locations within the hour. Call before 10am for same-day service.
                   </p>
                 </div>

@@ -87,7 +87,7 @@ export default function Contact() {
                 <Phone className="w-8 h-8 shrink-0 group-hover:rotate-12 transition-transform" />
                 <div>
                   <p className="font-black text-xl">01622 000 000</p>
-                  <p className="text-white/80 text-sm font-medium">Landline — Maidstone office</p>
+                  <p className="text-white/80 text-sm font-medium">Landline — Sittingbourne office</p>
                 </div>
               </a>
 
@@ -123,7 +123,7 @@ export default function Contact() {
                 <p className="font-bold flex items-center gap-2 mb-3"><BadgeCheck className="w-5 h-5 text-green-400" /> Licensing</p>
                 <p className="text-sm text-slate-300">Environment Agency Registered</p>
                 <p className="text-sm text-slate-300">Upper Tier Waste Carrier</p>
-                <p className="font-mono text-xs text-slate-500 mt-3">Reg: CBDU123456</p>
+                <p className="font-mono text-xs text-slate-500 mt-3">Company Reg: 16770749</p>
               </div>
             </div>
 
@@ -219,7 +219,7 @@ export default function Contact() {
       {/* ===== MAP ===== */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <SectionHeading title="Find Us" subtitle="Based in Maidstone, serving all of Kent." />
+          <SectionHeading title="Find Us" subtitle="Based in Sittingbourne, serving all of Kent." />
           <div className="max-w-4xl mx-auto bg-white p-2 border-4 border-slate-900 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] h-[400px]">
             <iframe
               title="Kent Complete Clearances Location"
