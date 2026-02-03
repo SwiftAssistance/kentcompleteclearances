@@ -48,20 +48,20 @@ export default function Services() {
       </section>
 
       {/* ===== QUICK NAV ===== */}
-      <section className="bg-white py-4 border-b-2 border-slate-200 sticky top-[72px] z-40">
+      <section className="bg-white py-3 border-b-2 border-slate-200 sticky top-[72px] z-40">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex gap-2 overflow-x-auto no-scrollbar justify-start md:justify-center pb-1">
             {[
               { id: 'house', icon: <Sofa className="w-4 h-4" />, label: 'House', color: 'hover:bg-red-600' },
               { id: 'garden', icon: <TreePine className="w-4 h-4" />, label: 'Garden', color: 'hover:bg-green-600' },
               { id: 'builders', icon: <Construction className="w-4 h-4" />, label: 'Trade', color: 'hover:bg-yellow-500 hover:text-slate-900' },
-              { id: 'office', icon: <Trash2 className="w-4 h-4" />, label: 'Commercial', color: 'hover:bg-slate-900' },
-              { id: 'single', icon: <Package className="w-4 h-4" />, label: 'Single Items', color: 'hover:bg-blue-600' },
+              { id: 'office', icon: <Trash2 className="w-4 h-4" />, label: 'Office', color: 'hover:bg-slate-900' },
+              { id: 'single', icon: <Package className="w-4 h-4" />, label: 'Single Item', color: 'hover:bg-blue-600' },
             ].map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className={`flex items-center gap-2 px-3 py-1.5 border-2 border-slate-900 font-bold text-xs uppercase transition-all hover:text-white ${item.color}`}
+                className={`flex items-center gap-2 px-3 py-1.5 border-2 border-slate-900 font-bold text-xs uppercase transition-all hover:text-white whitespace-nowrap shrink-0 ${item.color}`}
               >
                 {item.icon} {item.label}
               </a>
@@ -318,27 +318,24 @@ export default function Services() {
         </div>
       </section>
 
-      {/* ===== HOW IT WORKS ===== */}
+      {/* ===== OUR GUARANTEES ===== */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-slate-100 to-slate-50 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
-          <SectionHeading title="How It Works" subtitle="3 simple steps. That's it." />
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <SectionHeading title="The Kent Complete Guarantee" subtitle="Every single job. No exceptions." />
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
-              { step: '01', icon: <Camera className="w-10 h-10" />, title: 'Send a Photo', desc: 'WhatsApp, text, or use our form. We reply with a fixed price within minutes.', color: 'bg-red-600' },
-              { step: '02', icon: <CalendarCheck className="w-10 h-10" />, title: 'We Show Up', desc: 'Same day, next day, or whenever suits. On time, every time.', color: 'bg-slate-900' },
-              { step: '03', icon: <ThumbsUp className="w-10 h-10" />, title: 'Job Done', desc: 'We load, sweep, and go. 98% recycled. Waste transfer note provided.', color: 'bg-green-600' },
+              { icon: <Shield className="w-8 h-8" />, title: 'Fixed Price Promise', desc: 'The quote we give is the price you pay. No hidden charges, no extras, no surprises on the day. We absorb any unexpected costs ourselves.', color: 'bg-red-600' },
+              { icon: <Clock className="w-8 h-8" />, title: 'On-Time or It\u2019s Free', desc: 'We arrive within the time slot we agree. If we\u2019re late for any reason within our control, your job is on us.', color: 'bg-blue-600' },
+              { icon: <Recycle className="w-8 h-8" />, title: '98% Recycling Pledge', desc: 'We sort every load by hand at the transfer station. Reusable items go to charity. Only 2% ends up in landfill.', color: 'bg-green-600' },
+              { icon: <Truck className="w-8 h-8" />, title: 'Full Clean-Up', desc: 'We don\u2019t just take your stuff and leave a mess. Every job ends with a sweep-up so the area is left clean and tidy.', color: 'bg-yellow-500 text-slate-900' },
             ].map((item, i) => (
-              <div key={i} className="relative group">
-                {i < 2 && (
-                  <div className="hidden md:block absolute top-16 left-[calc(100%_-_1rem)] w-[calc(100%_-_6rem)] h-0.5 bg-slate-300 z-0">
-                    <ArrowRight className="absolute right-0 -top-2 w-5 h-5 text-slate-400" />
-                  </div>
-                )}
-                <div className="bg-white border-4 border-slate-900 p-8 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] text-center relative z-10 group-hover:-translate-y-2 transition-transform">
-                  <div className="absolute -top-4 -right-4 bg-red-600 text-white w-10 h-10 flex items-center justify-center font-black border-2 border-slate-900 text-sm">{item.step}</div>
-                  <div className={`${item.color} text-white w-20 h-20 mx-auto flex items-center justify-center border-2 border-slate-900 mb-6 group-hover:rotate-6 transition-transform`}>{item.icon}</div>
-                  <h3 className="text-xl font-black uppercase mb-3">{item.title}</h3>
-                  <p className="text-slate-600 font-medium">{item.desc}</p>
+              <div key={i} className="bg-white border-4 border-slate-900 p-6 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] flex items-start gap-5 hover:-translate-y-1 transition-transform">
+                <div className={`${item.color} text-white w-16 h-16 flex items-center justify-center border-2 border-slate-900 shrink-0`}>
+                  {item.icon}
+                </div>
+                <div>
+                  <h3 className="text-lg font-black uppercase mb-2">{item.title}</h3>
+                  <p className="text-slate-600 font-medium text-sm">{item.desc}</p>
                 </div>
               </div>
             ))}

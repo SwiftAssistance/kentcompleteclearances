@@ -204,7 +204,7 @@ export default function Contact() {
             {[
               { icon: <Zap className="w-8 h-8" />, title: 'Fast Response', desc: 'We reply to every enquiry within 30 minutes during working hours.', color: 'text-yellow-400' },
               { icon: <Shield className="w-8 h-8" />, title: 'Fixed Pricing', desc: 'No nasty surprises. The price we quote is the price you pay.', color: 'text-green-400' },
-              { icon: <Recycle className="w-8 h-8" />, title: '98% Recycled', desc: 'We sort everything. Reusables go to charity, the rest to authorized centres.', color: 'text-blue-400' },
+              { icon: <Recycle className="w-8 h-8" />, title: '98% Recycled', desc: 'We sort everything. Reusables go to charity, the rest to authorised centres.', color: 'text-blue-400' },
             ].map((item, i) => (
               <div key={i} className="bg-slate-800 border-2 border-slate-700 p-6 text-center hover:border-slate-600 transition-colors">
                 <div className={`${item.color} mx-auto mb-4`}>{item.icon}</div>
