@@ -191,10 +191,10 @@ export default function Services() {
               <div className="grid lg:grid-cols-5 gap-0 border-4 border-slate-900 shadow-[12px_12px_0px_0px_rgba(220,38,38,1)] bg-white overflow-hidden">
                 <div className="lg:col-span-3 p-8 space-y-6 order-2 lg:order-1">
                   <p className="text-lg text-slate-600 font-medium leading-relaxed">
-                    Moving office? Closing a retail unit? We provide secure, professional disposal of office furniture, IT equipment (WEEE compliant), and confidential paper waste. VAT invoices and full audit trails provided for your records.
+                    Moving office? Closing a retail unit? We provide secure, professional disposal of office furniture, IT equipment (WEEE compliant), and confidential paper waste. Full documentation and audit trails provided for your records.
                   </p>
                   <div className="grid sm:grid-cols-2 gap-3">
-                    {['WEEE-compliant disposal','Confidential destruction','VAT invoices provided','Out-of-hours clearances','Full audit trail','Regular contracts'].map((feat, i) => (
+                    {['WEEE-compliant disposal','Confidential destruction','Full documentation','Out-of-hours clearances','Full audit trail','Regular contracts'].map((feat, i) => (
                       <div key={i} className="flex items-center gap-2 text-sm font-bold text-slate-700">
                         <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> {feat}
                       </div>

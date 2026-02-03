@@ -47,7 +47,7 @@ export default function Navbar() {
       <div className="bg-slate-900 text-white py-2 px-4 text-xs md:text-sm font-bold tracking-wide">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-red-500" /> Licensed Waste Carrier (CBDU12345)</span>
+            <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-red-500" /> Licensed Waste Carrier</span>
             <span className="hidden md:flex items-center gap-2"><Clock className="w-4 h-4 text-red-500" /> Same Day Service Available</span>
           </div>
           <a href="tel:01622000000" className="hover:text-red-400 transition-colors flex items-center gap-1">

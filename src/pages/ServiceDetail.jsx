@@ -146,7 +146,7 @@ const SERVICES_DATA = {
       'Wait & load service available',
       'We load everything for you',
       'Mixed waste accepted',
-      'VAT invoices for trade customers',
+      'Full documentation for trade customers',
     ],
     whatWeTake: [
       'Rubble & concrete', 'Plasterboard & drywall', 'Timber & wood',
@@ -157,7 +157,7 @@ const SERVICES_DATA = {
     paragraphs: [
       'Cheaper than a skip. No permit needed. Our builders waste removal service is designed for tradespeople, contractors, and homeowners mid-renovation. We turn up, load everything into the van (or you can help on our wait-and-load service), and drive away immediately.',
       'No driveway blocked for days. No waiting for delivery and collection. No permits. No fines for overloading. We accept all types of construction waste including rubble, plasterboard, timber, kitchen and bathroom rip-outs, and mixed waste. We can usually be with you the same day or next day.',
-      'For trade customers, we provide VAT invoices and waste transfer notes for every job. Many builders and contractors across Kent use us regularly because we\'re faster, cheaper, and more flexible than traditional skip hire. We also offer regular collection schedules for ongoing projects.',
+      'For trade customers, we provide full documentation and waste transfer notes for every job. Many builders and contractors across Kent use us regularly because we\'re faster, cheaper, and more flexible than traditional skip hire. We also offer regular collection schedules for ongoing projects.',
     ],
     pricing: [
       { name: 'Small Load', price: 'from \u00a3100' },
@@ -168,7 +168,7 @@ const SERVICES_DATA = {
     faqs: [
       { question: 'Is it really cheaper than a skip?', answer: 'Almost always, yes. With us there\u2019s no permit needed, no waiting for delivery, no heavy lifting, and no road-blocking your driveway. We load everything for you and take it away immediately. For most jobs, we\'re 20-40% cheaper than skip hire once you factor in permit costs.' },
       { question: 'Can you take mixed construction waste?', answer: 'Yes, we accept all types of construction and renovation waste in the same load. Rubble, plasterboard, timber, tiles, metal, plumbing — it all goes. We sort and recycle at the transfer station.' },
-      { question: 'Do you provide waste transfer notes?', answer: 'Yes. We provide a waste transfer note for every single job. This is your legal proof that your waste was disposed of responsibly by a licensed carrier. We also provide VAT invoices for trade customers.' },
+      { question: 'Do you provide waste transfer notes?', answer: 'Yes. We provide a waste transfer note for every single job. This is your legal proof that your waste was disposed of responsibly by a licensed carrier. We also provide full documentation for trade customers.' },
     ],
     reviewIndices: [4, 1],
     processTitle: 'How Trade Waste Removal Works',
@@ -176,12 +176,12 @@ const SERVICES_DATA = {
     processSteps: [
       { icon: 'ClipboardCheck', title: 'Book Your Slot', desc: 'Call or message us with what needs collecting. We schedule a pickup that fits your project timeline \u2014 same day if needed.', color: 'bg-yellow-500 text-slate-900' },
       { icon: 'Truck', title: 'We Park & Load', desc: 'Our van arrives at your site. We load rubble, plasterboard, timber \u2014 everything goes in one trip. You keep working.', color: 'bg-slate-900' },
-      { icon: 'Receipt', title: 'Paperwork Sorted', desc: 'You get a waste transfer note and VAT invoice by email before we\u2019ve left the postcode. Compliance handled.', color: 'bg-green-600' },
+      { icon: 'Receipt', title: 'Paperwork Sorted', desc: 'You get a waste transfer note by email before we\u2019ve left the postcode. Compliance handled.', color: 'bg-green-600' },
     ],
     keyFactsTitle: 'Trade Customer Benefits',
     keyFacts: [
       { label: 'Regular collection schedules', value: 'Available' },
-      { label: 'VAT invoices', value: 'On every job' },
+      { label: 'Documentation', value: 'On every job' },
       { label: 'Typical saving vs skip hire', value: '20\u201340%' },
       { label: 'Mixed waste accepted', value: 'Always' },
     ],
@@ -200,7 +200,7 @@ const SERVICES_DATA = {
     features: [
       'WEEE-compliant IT equipment disposal',
       'Confidential document destruction',
-      'VAT invoices provided',
+      'Full documentation provided',
       'Out-of-hours clearances available',
       'Full audit trail & documentation',
       'Regular contract options',
@@ -213,7 +213,7 @@ const SERVICES_DATA = {
     ],
     paragraphs: [
       'Moving office? Closing a retail unit? Kent Complete Clearances provides secure, professional disposal of office furniture, IT equipment, and confidential waste for businesses across Kent. We understand that business clearances often need to happen quickly and with minimal disruption.',
-      'All IT equipment is disposed of in compliance with WEEE (Waste Electrical and Electronic Equipment) regulations. Confidential documents and data-bearing devices are securely destroyed, and we provide certificates of destruction on request. VAT invoices and full audit trails are standard on every commercial job.',
+      'All IT equipment is disposed of in compliance with WEEE (Waste Electrical and Electronic Equipment) regulations. Confidential documents and data-bearing devices are securely destroyed, and we provide certificates of destruction on request. Full documentation and audit trails are standard on every commercial job.',
       'We can work outside of normal business hours to minimise disruption to your operations. Whether you need a single office cleared or an entire building emptied, we have the team and the vehicles to handle it. Many businesses across Kent trust us for regular waste management contracts.',
     ],
     pricing: null,

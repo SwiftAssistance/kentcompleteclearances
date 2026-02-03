@@ -141,7 +141,7 @@ export default function Home() {
               { icon: <Sofa className="w-10 h-10" />, title: 'House Clearance', desc: 'Sofas, fridges, full house clear-outs. We do the heavy lifting.', bg: 'bg-white', accent: 'bg-red-600', slug: 'house-clearance' },
               { icon: <TreePine className="w-10 h-10" />, title: 'Garden Waste', desc: 'Green waste, soil, rubble, old sheds. We sweep the patio after.', bg: 'bg-white', accent: 'bg-green-600', slug: 'garden-waste' },
               { icon: <Construction className="w-10 h-10" />, title: 'Builders Waste', desc: 'Rubble, plasterboard, timber. Cheaper than a skip permit.', bg: 'bg-white', accent: 'bg-yellow-500', slug: 'builders-waste' },
-              { icon: <Trash2 className="w-10 h-10" />, title: 'Office Clearance', desc: 'Desks, WEEE, confidential waste. VAT invoices provided.', bg: 'bg-white', accent: 'bg-slate-900', slug: 'office-clearance' },
+              { icon: <Trash2 className="w-10 h-10" />, title: 'Office Clearance', desc: 'Desks, WEEE, confidential waste. Full documentation provided.', bg: 'bg-white', accent: 'bg-slate-900', slug: 'office-clearance' },
             ].map((s, i) => (
               <Link to={`/services/${s.slug}`} key={i} className={`${s.bg} border-4 border-slate-900 p-6 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] text-center group hover:-translate-y-2 transition-transform duration-300 block`}>
                 <div className={`${s.accent} text-white w-16 h-16 mx-auto flex items-center justify-center border-2 border-slate-900 mb-4 group-hover:rotate-6 transition-transform`}>
@@ -303,7 +303,7 @@ export default function Home() {
       <section className="py-16 md:py-20 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-72 h-72 bg-red-50 rounded-full opacity-40 blur-3xl pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
-          <SectionHeading title="Serving All of Kent" subtitle="Based in Maidstone, covering every corner of the county." />
+          <SectionHeading title="Serving All of Kent" subtitle="Based in Sittingbourne, covering every corner of the county." />
 
           <div className="grid lg:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
             <div className="bg-white p-2 border-4 border-slate-900 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] h-[400px] order-2 lg:order-1">
@@ -323,7 +323,7 @@ export default function Home() {
                 <div>
                   <h3 className="font-black uppercase text-lg mb-2">Same-Day Coverage</h3>
                   <p className="text-slate-600 font-medium">
-                    Our trucks are based in <strong className="text-slate-900">Maidstone</strong> and <strong className="text-slate-900">Ashford</strong>,
+                    Our trucks are based in <strong className="text-slate-900">Sittingbourne</strong>,
                     letting us reach most Kent locations within the hour. Call before 10am for same-day service.
                   </p>
                 </div>
@@ -332,7 +332,7 @@ export default function Home() {
               <div className="bg-slate-900 p-6 border-2 border-slate-900 text-white">
                 <h3 className="font-bold text-red-500 uppercase text-xs mb-3 tracking-widest">Covering All of Kent</h3>
                 <p className="text-slate-300 font-medium leading-relaxed">
-                  <span className="text-white font-bold">Maidstone</span> &bull; <span className="text-white font-bold">Ashford</span> &bull; Canterbury &bull; Dartford &bull; Sevenoaks &bull; Tunbridge Wells &bull; Gillingham &bull; Chatham &bull; Rochester &bull; Sittingbourne &bull; Faversham &bull; Whitstable <span className="text-red-400">&amp; all surrounding areas</span>
+                  <span className="text-white font-bold">Sittingbourne</span> &bull; Maidstone &bull; Canterbury &bull; Dartford &bull; Sevenoaks &bull; Tunbridge Wells &bull; Gillingham &bull; Chatham &bull; Rochester &bull; Ashford &bull; Faversham &bull; Whitstable <span className="text-red-400">&amp; all surrounding areas</span>
                 </p>
                 <Link to="/about#areas" className="inline-flex items-center gap-1 text-red-400 hover:text-red-300 font-bold text-sm mt-3 transition-colors">
                   View full coverage area <ArrowRight className="w-4 h-4" />

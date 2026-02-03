@@ -72,7 +72,7 @@ export default function Footer() {
                   </div>
                 </Link>
                 <p className="text-sm mb-5 leading-relaxed">
-                  Professional, licensed waste removal for homes and businesses across Kent. Family run, locally trusted since 2015.
+                  Professional, licensed waste removal for homes and businesses across Kent. Family run, locally trusted since 2025.
                 </p>
                 <div className="bg-slate-800/50 p-4 border border-slate-700">
                   <p className="font-bold text-white text-xs mb-2 flex items-center gap-2">
@@ -80,7 +80,7 @@ export default function Footer() {
                   </p>
                   <p className="text-xs text-slate-400">Environment Agency Registered</p>
                   <p className="text-xs text-slate-400">Upper Tier Carrier Dealer</p>
-                  <p className="font-mono text-xs text-slate-500 mt-2">Reg: CBDU123456</p>
+                  <p className="font-mono text-xs text-slate-500 mt-2">Company Reg: 16770749</p>
                 </div>
               </div>
 
@@ -150,7 +150,7 @@ export default function Footer() {
                       <MapPin className="w-4 h-4" />
                     </div>
                     <div>
-                      <p className="text-white font-bold text-sm">Based in Maidstone</p>
+                      <p className="text-white font-bold text-sm">Based in Sittingbourne</p>
                       <p className="text-xs text-slate-400">Covering all of Kent</p>
                     </div>
                   </div>
@@ -166,9 +166,8 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
               <p>&copy; {new Date().getFullYear()} Kent Complete Clearances. All rights reserved.</p>
               <div className="flex items-center gap-6">
-                <Link to="/about" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
-                <Link to="/about" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
-                <p>Designed in Kent</p>
+                <Link to="/privacy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
+                <Link to="/terms" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
               </div>
             </div>
           </div>
@@ -176,15 +175,15 @@ export default function Footer() {
       </footer>
 
       {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-slate-900 border-t-2 border-red-600 p-3 flex gap-2">
-        <a href="tel:01622000000" className="flex-1 bg-red-600 text-white text-center py-3 font-black uppercase text-sm border-2 border-slate-900 flex items-center justify-center gap-2">
-          <Phone className="w-4 h-4" /> Call Now
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-slate-900 border-t border-red-600 p-2 flex gap-2">
+        <a href="tel:01622000000" className="flex-1 bg-red-600 text-white text-center py-2 font-bold uppercase text-xs border border-slate-700 flex items-center justify-center gap-1">
+          <Phone className="w-3 h-3" /> Call
         </a>
-        <Link to="/contact" className="flex-1 bg-white text-slate-900 text-center py-3 font-black uppercase text-sm border-2 border-slate-900 flex items-center justify-center gap-2">
-          <ArrowRight className="w-4 h-4" /> Free Quote
+        <Link to="/contact" className="flex-1 bg-white text-slate-900 text-center py-2 font-bold uppercase text-xs border border-slate-700 flex items-center justify-center gap-1">
+          <ArrowRight className="w-3 h-3" /> Quote
         </Link>
       </div>
-      <div className="h-16 md:hidden"></div>
+      <div className="h-12 md:hidden"></div>
     </>
   );
 }
