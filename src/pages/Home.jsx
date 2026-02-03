@@ -138,12 +138,12 @@ export default function Home() {
           <SectionHeading title="Our Services" subtitle="No generic packages. We clear exactly what you need cleared." />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
-              { icon: <Sofa className="w-10 h-10" />, title: 'House Clearance', desc: 'Sofas, fridges, full house clear-outs. We do the heavy lifting.', bg: 'bg-white', accent: 'bg-red-600' },
-              { icon: <TreePine className="w-10 h-10" />, title: 'Garden Waste', desc: 'Green waste, soil, rubble, old sheds. We sweep the patio after.', bg: 'bg-white', accent: 'bg-green-600' },
-              { icon: <Construction className="w-10 h-10" />, title: 'Builders Waste', desc: 'Rubble, plasterboard, timber. Cheaper than a skip permit.', bg: 'bg-white', accent: 'bg-yellow-500' },
-              { icon: <Trash2 className="w-10 h-10" />, title: 'Office Clearance', desc: 'Desks, WEEE, confidential waste. VAT invoices provided.', bg: 'bg-white', accent: 'bg-slate-900' },
+              { icon: <Sofa className="w-10 h-10" />, title: 'House Clearance', desc: 'Sofas, fridges, full house clear-outs. We do the heavy lifting.', bg: 'bg-white', accent: 'bg-red-600', slug: 'house-clearance' },
+              { icon: <TreePine className="w-10 h-10" />, title: 'Garden Waste', desc: 'Green waste, soil, rubble, old sheds. We sweep the patio after.', bg: 'bg-white', accent: 'bg-green-600', slug: 'garden-waste' },
+              { icon: <Construction className="w-10 h-10" />, title: 'Builders Waste', desc: 'Rubble, plasterboard, timber. Cheaper than a skip permit.', bg: 'bg-white', accent: 'bg-yellow-500', slug: 'builders-waste' },
+              { icon: <Trash2 className="w-10 h-10" />, title: 'Office Clearance', desc: 'Desks, WEEE, confidential waste. VAT invoices provided.', bg: 'bg-white', accent: 'bg-slate-900', slug: 'office-clearance' },
             ].map((s, i) => (
-              <Link to="/services" key={i} className={`${s.bg} border-4 border-slate-900 p-6 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] text-center group hover:-translate-y-2 transition-transform duration-300 block`}>
+              <Link to={`/services/${s.slug}`} key={i} className={`${s.bg} border-4 border-slate-900 p-6 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] text-center group hover:-translate-y-2 transition-transform duration-300 block`}>
                 <div className={`${s.accent} text-white w-16 h-16 mx-auto flex items-center justify-center border-2 border-slate-900 mb-4 group-hover:rotate-6 transition-transform`}>
                   {s.icon}
                 </div>
