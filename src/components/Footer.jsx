@@ -90,11 +90,12 @@ export default function Footer() {
                   <span className="w-8 h-0.5 bg-red-600"></span> Services
                 </h4>
                 <ul className="space-y-3 text-sm">
-                  <li><Link to="/services" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> House Clearance</Link></li>
-                  <li><Link to="/services" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Garden Waste</Link></li>
-                  <li><Link to="/services" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Office Clearouts</Link></li>
-                  <li><Link to="/services" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Wait &amp; Load</Link></li>
-                  <li><Link to="/services" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Builders Waste</Link></li>
+                  <li><Link to="/services/house-clearance" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> House Clearance</Link></li>
+                  <li><Link to="/services/garden-waste" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Garden Waste</Link></li>
+                  <li><Link to="/services/office-clearance" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Office Clearance</Link></li>
+                  <li><Link to="/services/wait-and-load" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Wait &amp; Load</Link></li>
+                  <li><Link to="/services/builders-waste" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Builders Waste</Link></li>
+                  <li><Link to="/services/single-item-removal" className="hover:text-red-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-red-600" /> Single Item Removal</Link></li>
                 </ul>
               </div>
 

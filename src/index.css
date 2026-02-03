@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Subtle pulse for CTA buttons */
 @keyframes pulse-subtle {
   0%, 100% { box-shadow: 4px 4px 0px 0px rgba(15,23,42,1); }
@@ -41,5 +36,12 @@ html {
 
 /* Scroll offset for anchor links (accounts for sticky nav) */
 [id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 90px;
+}
+
+/* Smooth scroll only for anchor clicks, not programmatic navigation */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

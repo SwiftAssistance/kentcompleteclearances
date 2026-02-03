@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
+import ServiceDetail from './pages/ServiceDetail';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
@@ -11,12 +12,17 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
     if (hash) {
-      setTimeout(() => {
+      // Wait for DOM to settle, then smooth scroll to the hash target
+      const timer = setTimeout(() => {
         const el = document.querySelector(hash);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 150);
+      return () => clearTimeout(timer);
     } else {
-      window.scrollTo(0, 0);
+      // Instant scroll to top on page navigation (no smooth - feels faster on mobile)
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }
   }, [pathname, hash]);
   return null;
@@ -31,6 +37,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

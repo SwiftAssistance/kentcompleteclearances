@@ -48,9 +48,9 @@ export default function Services() {
       </section>
 
       {/* ===== QUICK NAV ===== */}
-      <section className="bg-white py-6 border-b-2 border-slate-200 sticky top-[72px] z-40">
+      <section className="bg-white py-4 border-b-2 border-slate-200 sticky top-[72px] z-40">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2">
             {[
               { id: 'house', icon: <Sofa className="w-4 h-4" />, label: 'House', color: 'hover:bg-red-600' },
               { id: 'garden', icon: <TreePine className="w-4 h-4" />, label: 'Garden', color: 'hover:bg-green-600' },
@@ -61,7 +61,7 @@ export default function Services() {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className={`flex items-center gap-2 px-4 py-2 border-2 border-slate-900 font-bold text-sm uppercase transition-all hover:text-white ${item.color}`}
+                className={`flex items-center gap-2 px-3 py-1.5 border-2 border-slate-900 font-bold text-xs uppercase transition-all hover:text-white ${item.color}`}
               >
                 {item.icon} {item.label}
               </a>
@@ -100,9 +100,14 @@ export default function Services() {
                       ))}
                     </div>
                   </div>
-                  <Button as="link" to="/contact" className="w-full sm:w-auto">
-                    Get House Clearance Quote <ArrowRight className="w-5 h-5" />
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button as="link" to="/contact" className="w-full sm:w-auto">
+                      Get House Clearance Quote <ArrowRight className="w-5 h-5" />
+                    </Button>
+                    <Button as="link" to="/services/house-clearance" variant="outline" className="w-full sm:w-auto">
+                      View Full Details <ArrowRight className="w-5 h-5" />
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -122,9 +127,14 @@ export default function Services() {
                       ))}
                     </div>
                   </div>
-                  <Button as="link" to="/contact" className="w-full sm:w-auto bg-green-700 hover:bg-green-600">
-                    Get Garden Quote <ArrowRight className="w-5 h-5" />
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button as="link" to="/contact" className="w-full sm:w-auto bg-green-700 hover:bg-green-600">
+                      Get Garden Quote <ArrowRight className="w-5 h-5" />
+                    </Button>
+                    <Button as="link" to="/services/garden-waste" variant="outline" className="w-full sm:w-auto">
+                      View Full Details <ArrowRight className="w-5 h-5" />
+                    </Button>
+                  </div>
                 </div>
                 <div className="lg:col-span-2 bg-green-700 text-white p-8 flex flex-col justify-center order-1 lg:order-2">
                   <TreePine className="w-16 h-16 mb-6" />
@@ -164,9 +174,14 @@ export default function Services() {
                       ))}
                     </div>
                   </div>
-                  <Button as="link" to="/contact" className="w-full sm:w-auto bg-yellow-500 hover:bg-yellow-400 text-slate-900">
-                    Get Trade Quote <ArrowRight className="w-5 h-5" />
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button as="link" to="/contact" className="w-full sm:w-auto bg-yellow-500 hover:bg-yellow-400 text-slate-900">
+                      Get Trade Quote <ArrowRight className="w-5 h-5" />
+                    </Button>
+                    <Button as="link" to="/services/builders-waste" variant="outline" className="w-full sm:w-auto">
+                      View Full Details <ArrowRight className="w-5 h-5" />
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -185,9 +200,14 @@ export default function Services() {
                       </div>
                     ))}
                   </div>
-                  <Button as="link" to="/contact" variant="dark" className="w-full sm:w-auto">
-                    Business Enquiry <ArrowRight className="w-5 h-5" />
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button as="link" to="/contact" variant="dark" className="w-full sm:w-auto">
+                      Business Enquiry <ArrowRight className="w-5 h-5" />
+                    </Button>
+                    <Button as="link" to="/services/office-clearance" variant="outline" className="w-full sm:w-auto">
+                      View Full Details <ArrowRight className="w-5 h-5" />
+                    </Button>
+                  </div>
                 </div>
                 <div className="lg:col-span-2 bg-slate-900 text-white p-8 flex flex-col justify-center order-1 lg:order-2">
                   <Trash2 className="w-16 h-16 mb-6" />
@@ -230,9 +250,14 @@ export default function Services() {
                     ))}
                   </div>
                   <p className="text-sm text-slate-500 mb-6">*Prices are estimates. Send a photo for an exact quote.</p>
-                  <Button as="link" to="/contact" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500">
-                    Get Single Item Quote <ArrowRight className="w-5 h-5" />
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button as="link" to="/contact" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500">
+                      Get Single Item Quote <ArrowRight className="w-5 h-5" />
+                    </Button>
+                    <Button as="link" to="/services/single-item-removal" variant="outline" className="w-full sm:w-auto">
+                      View Full Details <ArrowRight className="w-5 h-5" />
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
