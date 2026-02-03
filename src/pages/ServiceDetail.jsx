@@ -4,11 +4,14 @@ import {
   Sofa, TreePine, Construction, Trash2, Package, Truck,
   CheckCircle2, ArrowRight, Phone, Shield, Clock, Recycle,
   BadgeCheck, Camera, CalendarCheck, ThumbsUp, MessageCircle,
-  Star, MapPin, Home as HomeIcon, ChevronRight, X
+  Star, MapPin, Home as HomeIcon, ChevronRight, X,
+  ClipboardCheck, Sparkles, Eye, Hammer, Lock, FileCheck,
+  Heart, Leaf, Users, Timer, Receipt, Wrench
 } from 'lucide-react';
 import { Button, SectionHeading, FAQItem, REVIEWS } from '../components/ui';
 
 const ICONS = { Sofa, TreePine, Construction, Trash2, Package, Truck };
+const STEP_ICONS = { Eye, Users, Sparkles, Camera, Wrench, ClipboardCheck, Truck, Receipt, Lock, FileCheck, ThumbsUp, Heart };
 
 const SERVICES_DATA = {
   'house-clearance': {
@@ -53,6 +56,20 @@ const SERVICES_DATA = {
       { question: 'Do I need to be at the property?', answer: 'Not always. For many jobs, you can leave a key or arrange access with a neighbour. We\'ll send you before-and-after photos once the job is done. For larger clearances, we recommend being there at the start so you can walk us through anything specific.' },
     ],
     reviewIndices: [0, 3],
+    processTitle: 'Your House Clearance, Step by Step',
+    processSubtitle: 'Here\u2019s exactly what happens when you book with us.',
+    processSteps: [
+      { icon: 'Eye', title: 'We Assess & Quote', desc: 'Send us photos or we\u2019ll visit the property. We give a fixed price based on volume \u2014 no surprises, no extras.', color: 'bg-red-600' },
+      { icon: 'Users', title: 'We Clear Everything', desc: 'Our team works room by room, carefully removing all items. We identify anything of value or sentimental importance first.', color: 'bg-slate-900' },
+      { icon: 'Sparkles', title: 'Broom-Clean Finish', desc: 'Once cleared, we sweep every room and leave the property ready for sale, rental, or handover. Spotless.', color: 'bg-green-600' },
+    ],
+    keyFactsTitle: 'House Clearance at a Glance',
+    keyFacts: [
+      { label: 'Average clearance time', value: '2\u20134 hours' },
+      { label: 'Recycling rate', value: '98%' },
+      { label: 'Items donated to charity', value: '1,200+ last year' },
+      { label: 'Probate clearances completed', value: '150+' },
+    ],
   },
   'garden-waste': {
     title: 'Garden Waste Removal',
@@ -81,7 +98,7 @@ const SERVICES_DATA = {
     ],
     paragraphs: [
       'Overgrown jungle? Pile of soil from a landscaping job? Old rotten shed? Kent Complete Clearances takes it all. Our team loads everything — even the heavy stuff — and we sweep the patio before we leave. No skips blocking your driveway, no permits, no hassle.',
-      'We can also dismantle sheds, decking, and fencing on-site. Whether it\'s the remains of a DIY project or a full garden clearance before selling your home, we\'ll have it cleared quickly and responsibly. All green waste goes to authorized composting facilities, and rubble goes to licensed recycling centres.',
+      'We can also dismantle sheds, decking, and fencing on-site. Whether it\'s the remains of a DIY project or a full garden clearance before selling your home, we\'ll have it cleared quickly and responsibly. All green waste goes to authorised composting facilities, and rubble goes to licensed recycling centres.',
       'Our garden waste service is popular with landscapers, gardeners, and homeowners across Kent. We\'re often significantly cheaper than skip hire once you factor in the cost of a permit, the time waiting for delivery and collection, and the heavy lifting you have to do yourself with a skip.',
     ],
     pricing: [
@@ -93,9 +110,23 @@ const SERVICES_DATA = {
     faqs: [
       { question: 'Can you remove soil and rubble?', answer: 'Yes, we take soil, turf, rubble, hardcore, paving slabs, and all types of garden waste. Heavier materials like rubble may be priced slightly higher due to weight, but we\'ll always give you a fixed price upfront.' },
       { question: 'Do you dismantle sheds?', answer: 'Yes, we can demolish and remove old sheds, decking, fencing, and other garden structures. This is included in our service — just let us know when you send your photos for a quote.' },
-      { question: 'Is garden waste recycled?', answer: 'All green waste goes to licensed composting facilities. Rubble and hardcore go to authorized recycling centres. We achieve a 98% recycling rate across all waste types.' },
+      { question: 'Is garden waste recycled?', answer: 'All green waste goes to licensed composting facilities. Rubble and hardcore go to authorised recycling centres. We achieve a 98% recycling rate across all waste types.' },
     ],
     reviewIndices: [1, 5],
+    processTitle: 'Your Garden Clearance, Start to Finish',
+    processSubtitle: 'From jungle to joy \u2014 here\u2019s how we do it.',
+    processSteps: [
+      { icon: 'Camera', title: 'Show Us the Mess', desc: 'Send a photo of your garden. We price based on volume, weight, and any demolition work needed. Fixed price, no obligation.', color: 'bg-green-700' },
+      { icon: 'Wrench', title: 'We Arrive with Tools', desc: 'Our team brings everything needed to dismantle sheds, pull up decking, cut back overgrowth, and load the van.', color: 'bg-slate-900' },
+      { icon: 'Sparkles', title: 'Patio Swept Clean', desc: 'We load every last branch, bag, and brick. Then we sweep the patio and paths so your garden looks its best.', color: 'bg-green-600' },
+    ],
+    keyFactsTitle: 'Garden Waste in Numbers',
+    keyFacts: [
+      { label: 'Sheds demolished this year', value: '80+' },
+      { label: 'Green waste composted', value: '100%' },
+      { label: 'Average garden job time', value: '1\u20133 hours' },
+      { label: 'Cheaper than skip hire by', value: '20\u201340%' },
+    ],
   },
   'builders-waste': {
     title: 'Builders Waste Removal',
@@ -140,6 +171,20 @@ const SERVICES_DATA = {
       { question: 'Do you provide waste transfer notes?', answer: 'Yes. We provide a waste transfer note for every single job. This is your legal proof that your waste was disposed of responsibly by a licensed carrier. We also provide VAT invoices for trade customers.' },
     ],
     reviewIndices: [4, 1],
+    processTitle: 'How Trade Waste Removal Works',
+    processSubtitle: 'Built around your project schedule, not ours.',
+    processSteps: [
+      { icon: 'ClipboardCheck', title: 'Book Your Slot', desc: 'Call or message us with what needs collecting. We schedule a pickup that fits your project timeline \u2014 same day if needed.', color: 'bg-yellow-500 text-slate-900' },
+      { icon: 'Truck', title: 'We Park & Load', desc: 'Our van arrives at your site. We load rubble, plasterboard, timber \u2014 everything goes in one trip. You keep working.', color: 'bg-slate-900' },
+      { icon: 'Receipt', title: 'Paperwork Sorted', desc: 'You get a waste transfer note and VAT invoice by email before we\u2019ve left the postcode. Compliance handled.', color: 'bg-green-600' },
+    ],
+    keyFactsTitle: 'Trade Customer Benefits',
+    keyFacts: [
+      { label: 'Regular collection schedules', value: 'Available' },
+      { label: 'VAT invoices', value: 'On every job' },
+      { label: 'Typical saving vs skip hire', value: '20\u201340%' },
+      { label: 'Mixed waste accepted', value: 'Always' },
+    ],
   },
   'office-clearance': {
     title: 'Office & Commercial Clearance',
@@ -178,6 +223,20 @@ const SERVICES_DATA = {
       { question: 'Can you work outside business hours?', answer: 'Yes. We understand that many businesses need clearances done with minimal disruption. We can work evenings, weekends, or overnight to fit around your schedule. Just let us know when you get in touch.' },
     ],
     reviewIndices: [2, 4],
+    processTitle: 'Your Office Clearance Process',
+    processSubtitle: 'Minimal disruption. Maximum compliance.',
+    processSteps: [
+      { icon: 'Eye', title: 'Site Survey', desc: 'We visit your premises to assess scope, identify WEEE items, and plan the clearance around your working hours.', color: 'bg-slate-900' },
+      { icon: 'Lock', title: 'Secure Clearance', desc: 'Our team removes all furniture, IT equipment, and confidential waste with full chain-of-custody tracking throughout.', color: 'bg-red-600' },
+      { icon: 'FileCheck', title: 'Certificates Issued', desc: 'You receive waste transfer notes, WEEE compliance documentation, and certificates of destruction for your records.', color: 'bg-green-600' },
+    ],
+    keyFactsTitle: 'Compliance Dashboard',
+    keyFacts: [
+      { label: 'WEEE disposal', value: 'Fully certified' },
+      { label: 'Confidential destruction', value: 'Certificates issued' },
+      { label: 'Out-of-hours clearances', value: 'Available' },
+      { label: 'Regular contracts', value: 'Flexible terms' },
+    ],
   },
   'wait-and-load': {
     title: 'Wait & Load Service',
@@ -221,6 +280,20 @@ const SERVICES_DATA = {
       { question: 'Is there a time limit?', answer: 'We allow up to an hour for loading. For most jobs, this is more than enough. If you need longer, just let us know — we\'re flexible.' },
     ],
     reviewIndices: [4, 5],
+    processTitle: 'The Wait & Load Process',
+    processSubtitle: 'The fastest way to get rid of waste in Kent.',
+    processSteps: [
+      { icon: 'ClipboardCheck', title: 'You Pile It Up', desc: 'Get your waste bagged, stacked, or ready by the door. Don\u2019t worry if it\u2019s not perfect \u2014 just show us where it is.', color: 'bg-blue-600' },
+      { icon: 'Truck', title: 'Van Arrives', desc: 'We park up and open the doors. You load at your pace, we help with anything heavy. Most jobs done in under an hour.', color: 'bg-slate-900' },
+      { icon: 'ThumbsUp', title: 'Driven Away', desc: 'We close the doors and drive straight to the transfer station. No skip sitting on your drive all week. Done.', color: 'bg-green-600' },
+    ],
+    keyFactsTitle: 'Wait & Load vs Skip Hire',
+    keyFacts: [
+      { label: 'Council permit needed', value: 'Never' },
+      { label: 'Driveway blocked', value: 'Under 1 hour' },
+      { label: 'Heavy lifting', value: 'We help' },
+      { label: 'Typical saving', value: '20\u201340%' },
+    ],
   },
   'single-item-removal': {
     title: 'Single Item Removal',
@@ -264,6 +337,20 @@ const SERVICES_DATA = {
       { question: 'Can I add extra items on the day?', answer: 'Of course. If you have extra bits to go once we arrive, we\'ll give you a price on the spot. Many customers find a few extra things once they see how easy the process is!' },
     ],
     reviewIndices: [3, 0],
+    processTitle: 'Single Item Collection, Made Simple',
+    processSubtitle: 'No fuss. No heavy lifting. No hassle.',
+    processSteps: [
+      { icon: 'Camera', title: 'Snap & Send', desc: 'Take a photo of the item and WhatsApp it to us. We reply with an exact, fixed price within minutes. No obligation.', color: 'bg-blue-600' },
+      { icon: 'Users', title: 'We Collect', desc: 'Our team arrives, protects your floors and doorways, and carefully removes the item from any room \u2014 upstairs or down.', color: 'bg-slate-900' },
+      { icon: 'Heart', title: 'Recycled or Donated', desc: 'Reusable items go to local Kent charities. Everything else goes through proper recycling channels. Nothing fly-tipped, ever.', color: 'bg-green-600' },
+    ],
+    keyFactsTitle: 'Single Item Collection Stats',
+    keyFacts: [
+      { label: 'Most popular item', value: 'Sofas' },
+      { label: 'Average collection time', value: '15 minutes' },
+      { label: 'Items donated to charity', value: '40%' },
+      { label: 'Same-day available', value: 'Before 10am' },
+    ],
   },
 };
 
@@ -448,61 +535,47 @@ export default function ServiceDetail() {
         </section>
       )}
 
-      {/* ===== HOW IT WORKS ===== */}
+      {/* ===== SERVICE-SPECIFIC PROCESS ===== */}
       <section className="py-12 md:py-16 bg-gradient-to-br from-slate-100 to-slate-50">
         <div className="container mx-auto px-4">
-          <SectionHeading title="How It Works" subtitle="3 simple steps. That's it." />
+          <SectionHeading title={service.processTitle} subtitle={service.processSubtitle} />
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              { step: '01', icon: <Camera className="w-10 h-10" />, title: 'Send a Photo', desc: 'WhatsApp, text, or use our form. We reply with a fixed price within minutes.', color: 'bg-red-600' },
-              { step: '02', icon: <CalendarCheck className="w-10 h-10" />, title: 'We Show Up', desc: 'Same day, next day, or whenever suits. On time, every time.', color: 'bg-slate-900' },
-              { step: '03', icon: <ThumbsUp className="w-10 h-10" />, title: 'Job Done', desc: 'We load, sweep, and go. 98% recycled. Waste transfer note provided.', color: 'bg-green-600' },
-            ].map((item, i) => (
-              <div key={i} className="relative group">
-                {i < 2 && (
-                  <div className="hidden md:block absolute top-16 left-[calc(100%_-_1rem)] w-[calc(100%_-_6rem)] h-0.5 bg-slate-300 z-0">
-                    <ArrowRight className="absolute right-0 -top-2 w-5 h-5 text-slate-400" />
+            {service.processSteps.map((item, i) => {
+              const StepIcon = STEP_ICONS[item.icon];
+              return (
+                <div key={i} className="relative group">
+                  {i < 2 && (
+                    <div className="hidden md:block absolute top-16 left-[calc(100%_-_1rem)] w-[calc(100%_-_6rem)] h-0.5 bg-slate-300 z-0">
+                      <ArrowRight className="absolute right-0 -top-2 w-5 h-5 text-slate-400" />
+                    </div>
+                  )}
+                  <div className="bg-white border-4 border-slate-900 p-8 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] text-center relative z-10 group-hover:-translate-y-2 transition-transform">
+                    <div className="absolute -top-4 -right-4 bg-red-600 text-white w-10 h-10 flex items-center justify-center font-black border-2 border-slate-900 text-sm">{String(i + 1).padStart(2, '0')}</div>
+                    <div className={`${item.color} text-white w-20 h-20 mx-auto flex items-center justify-center border-2 border-slate-900 mb-6 group-hover:rotate-6 transition-transform`}>
+                      {StepIcon && <StepIcon className="w-10 h-10" />}
+                    </div>
+                    <h3 className="text-xl font-black uppercase mb-3">{item.title}</h3>
+                    <p className="text-slate-600 font-medium">{item.desc}</p>
                   </div>
-                )}
-                <div className="bg-white border-4 border-slate-900 p-8 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] text-center relative z-10 group-hover:-translate-y-2 transition-transform">
-                  <div className="absolute -top-4 -right-4 bg-red-600 text-white w-10 h-10 flex items-center justify-center font-black border-2 border-slate-900 text-sm">{item.step}</div>
-                  <div className={`${item.color} text-white w-20 h-20 mx-auto flex items-center justify-center border-2 border-slate-900 mb-6 group-hover:rotate-6 transition-transform`}>{item.icon}</div>
-                  <h3 className="text-xl font-black uppercase mb-3">{item.title}</h3>
-                  <p className="text-slate-600 font-medium">{item.desc}</p>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* ===== SKIP COMPARISON ===== */}
+      {/* ===== SERVICE KEY FACTS ===== */}
       <section className="py-12 md:py-16 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(220,38,38,0.15),transparent_50%)] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
-          <SectionHeading title="Us vs Skip Hire" subtitle="There's no contest." light />
-          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-0 border-4 border-slate-700">
-            <div className="bg-slate-800 p-6 md:p-8">
-              <div className="text-center mb-6">
-                <div className="inline-block bg-slate-700 px-4 py-2 text-slate-200 font-black uppercase text-sm tracking-wider border border-slate-600">Skip Hire</div>
+          <SectionHeading title={service.keyFactsTitle} subtitle={`Key numbers for our ${service.title.toLowerCase()} service.`} light />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {service.keyFacts.map((fact, i) => (
+              <div key={i} className="bg-slate-800 border-2 border-slate-700 p-6 text-center hover:border-slate-600 transition-colors">
+                <p className={`${service.colorText === 'text-slate-700' ? 'text-red-500' : service.colorText} font-black text-2xl mb-2`}>{fact.value}</p>
+                <p className="text-slate-400 text-sm font-bold uppercase tracking-wider">{fact.label}</p>
               </div>
-              <ul className="space-y-4">
-                {['Council permit needed','Wait 1-3 days for delivery','You load it yourself','Blocks your driveway','Extra charges for heavy items'].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-300 font-medium text-sm"><X className="w-5 h-5 text-red-500 shrink-0 mt-0.5" /><span>{item}</span></li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-red-600 p-6 md:p-8 relative">
-              <div className="absolute -top-3 right-4 bg-yellow-400 text-slate-900 px-3 py-1 text-xs font-black uppercase border-2 border-slate-900 rotate-2">Better</div>
-              <div className="text-center mb-6">
-                <div className="inline-block bg-red-700 px-4 py-2 text-white font-black uppercase text-sm tracking-wider border border-red-500">Kent Complete</div>
-              </div>
-              <ul className="space-y-4">
-                {['No permits needed','Same-day service','We load everything','In and out in under an hour','Fixed price — no surprises'].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-white font-medium text-sm"><CheckCircle2 className="w-5 h-5 text-yellow-300 shrink-0 mt-0.5" /><span>{item}</span></li>
-                ))}
-              </ul>
-            </div>
+            ))}
           </div>
         </div>
       </section>

@@ -171,7 +171,7 @@ export default function Home() {
           <SectionHeading title="Why Kent Trusts Us" subtitle="We're not a franchise. We're your neighbours." />
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { icon: <Recycle className="w-8 h-8" />, title: '98% Recycling Rate', desc: 'We sort everything. Reusables go to charity, the rest to authorized recycling centres. Never fly-tipped.', color: 'bg-green-600' },
+              { icon: <Recycle className="w-8 h-8" />, title: '98% Recycling Rate', desc: 'We sort everything. Reusables go to charity, the rest to authorised recycling centres. Never fly-tipped.', color: 'bg-green-600' },
               { icon: <Clock className="w-8 h-8" />, title: 'Same-Day Service', desc: 'Call before 10am, we can often be there that afternoon. No waiting days for skip delivery.', color: 'bg-blue-600' },
               { icon: <BadgeCheck className="w-8 h-8" />, title: 'Fully Licensed', desc: 'EA registered Upper Tier Carrier. Full public liability. Waste transfer notes on every job.', color: 'bg-red-600' },
             ].map((item, i) => (
@@ -343,7 +343,7 @@ export default function Home() {
                 <Recycle className="w-8 h-8 text-green-600 shrink-0" />
                 <div>
                   <h3 className="font-bold text-slate-900 uppercase text-sm">Responsible Disposal</h3>
-                  <p className="text-xs text-slate-600 mt-1">All waste goes to authorized transfer stations in Cuxton and Lenham. 98% recycling rate.</p>
+                  <p className="text-xs text-slate-600 mt-1">All waste goes to authorised transfer stations in Cuxton and Lenham. 98% recycling rate.</p>
                 </div>
               </div>
             </div>

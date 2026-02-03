@@ -95,7 +95,7 @@ export default function About() {
                     We're a family-run team based in <strong className="text-slate-900">Maidstone</strong>, covering every corner of Kent. When you call us, you're speaking to the people who actually do the work — not a booking agent in another city.
                   </p>
                   <p>
-                    Every van is driven by an insured, DBS-checked team member. We recycle or donate <strong className="text-slate-900">98% of everything we collect</strong>. The rest goes to authorized transfer stations — never fly-tipped, ever.
+                    Every van is driven by an insured, DBS-checked team member. We recycle or donate <strong className="text-slate-900">98% of everything we collect</strong>. The rest goes to authorised transfer stations — never fly-tipped, ever.
                   </p>
                 </div>
                 <div className="mt-8">
@@ -134,7 +134,7 @@ export default function About() {
               { icon: <BadgeCheck className="w-10 h-10" />, title: 'EA Registered', desc: 'Upper Tier Waste Carrier (CBDU123456)', color: 'text-green-400' },
               { icon: <Shield className="w-10 h-10" />, title: 'Fully Insured', desc: '£5M Public Liability Coverage', color: 'text-blue-400' },
               { icon: <FileCheck className="w-10 h-10" />, title: 'Duty of Care', desc: 'Waste Transfer Notes on every job', color: 'text-yellow-400' },
-              { icon: <Recycle className="w-10 h-10" />, title: '98% Recycled', desc: 'Authorized disposal sites only', color: 'text-green-400' },
+              { icon: <Recycle className="w-10 h-10" />, title: '98% Recycled', desc: 'Authorised disposal sites only', color: 'text-green-400' },
             ].map((item, i) => (
               <div key={i} className="bg-slate-800 border-2 border-slate-700 p-6 text-center hover:border-slate-600 transition-colors">
                 <div className={`${item.color} mx-auto mb-4`}>{item.icon}</div>
@@ -183,7 +183,7 @@ export default function About() {
                 <Recycle className="w-8 h-8 text-green-600 shrink-0" />
                 <div>
                   <h3 className="font-bold text-slate-900 uppercase text-sm">Responsible Disposal</h3>
-                  <p className="text-xs text-slate-600 mt-1">All waste goes to authorized transfer stations in Cuxton and Lenham. 98% recycling rate.</p>
+                  <p className="text-xs text-slate-600 mt-1">All waste goes to authorised transfer stations in Cuxton and Lenham. 98% recycling rate.</p>
                 </div>
               </div>
             </div>
